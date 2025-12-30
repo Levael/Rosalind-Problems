@@ -20,6 +20,5 @@ def BuiltInCounter_2(dna: str) -> str:
 def IntuitiveCounter(dna: str) -> str:
     counts = {'A': 0, 'C': 0, 'G': 0,'T': 0}
     for base in dna:
-        if base in counts:
-            counts[base] += 1
+        counts[base] += 1
     return f"{counts['A']} {counts['C']} {counts['G']} {counts['T']}"
