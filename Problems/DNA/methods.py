@@ -1,13 +1,6 @@
 from collections import Counter
 
 
-def NormalizeInput(dna: str) -> str:
-    return dna.strip().upper()
-
-def IsValidDNA(dna: str) -> bool:
-    allowed = set("ACGT")
-    return all(base in allowed for base in dna)
-
 def BuiltInCounter(dna: str) -> str:
     counts = Counter(dna)
     return f"{counts.get('A', 0)} {counts.get('C', 0)} {counts.get('G', 0)} {counts.get('T', 0)}"
