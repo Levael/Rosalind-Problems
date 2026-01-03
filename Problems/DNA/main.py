@@ -1,11 +1,11 @@
 ﻿from Common.io_utils import ReadInput, WriteOutput
-from Common.bio_utils import NormalizeInput, IsValidDNA
+from Common.bio_utils import NormalizeInput, IsStrongValidDNA
 from Problems.DNA.methods import *
 
 
 if __name__ == "__main__":
     input_text = NormalizeInput(ReadInput())
-    if IsValidDNA(input_text):
+    if IsStrongValidDNA(input_text):
         # choose method here
         solution = IntuitiveCounter(input_text)
     else:

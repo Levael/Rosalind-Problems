@@ -1,10 +1,10 @@
 import pytest
-from Common.bio_utils import NormalizeInput, IsValidDNA
+from Common.bio_utils import NormalizeInput, IsStrongValidDNA
 
 # Tuple format: (input_data, expected_result)
 NORMALIZATION_TEST_CASES = [
-    ("  acgt  \n", "ACGT"),
-    ("A C G T", "A C G T")
+    ("  ac gt  \n", "ACGT"),
+    ("A C G T", "ACGT")
 ]
 
 VALIDATION_TEST_CASES = [
@@ -21,4 +21,4 @@ def TestNormalizationMethods(dna, expected):
 
 @pytest.mark.parametrize("dna, expected", VALIDATION_TEST_CASES)
 def TestValidationMethods(dna, expected):
-    assert IsValidDNA(dna) == expected
+    assert IsStrongValidDNA(dna) == expected

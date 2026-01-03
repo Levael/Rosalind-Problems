@@ -26,27 +26,43 @@
     <Folder Include="Common\" />
     <Folder Include="Problems\" />
     <Folder Include="Problems\DNA\" />
+    <Folder Include="Problems\PROT\" />
     <Folder Include="Problems\RNA\" />
+    <Folder Include="Problems\REVC\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\bio_utils.py" />
     <Compile Include="Common\io_utils.py" />
     <Compile Include="Common\unit_tests.py" />
     <Compile Include="Common\__init__.py" />
-    <Compile Include="Problems\DNA\methods.py" />
     <Compile Include="Problems\DNA\main.py" />
+    <Compile Include="Problems\DNA\methods.py" />
     <Compile Include="Problems\DNA\unit_tests.py" />
     <Compile Include="Problems\DNA\__init__.py" />
+    <Compile Include="Problems\PROT\main.py" />
+    <Compile Include="Problems\PROT\methods.py" />
+    <Compile Include="Problems\PROT\unit_tests.py" />
+    <Compile Include="Problems\PROT\__init__.py" />
     <Compile Include="Problems\RNA\main.py" />
     <Compile Include="Problems\RNA\methods.py" />
     <Compile Include="Problems\RNA\unit_tests.py" />
     <Compile Include="Problems\RNA\__init__.py" />
+    <Compile Include="Problems\REVC\main.py" />
+    <Compile Include="Problems\REVC\methods.py" />
+    <Compile Include="Problems\REVC\unit_tests.py" />
+    <Compile Include="Problems\REVC\__init__.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Problems\DNA\output.txt" />
+    <Content Include=".gitignore" />
     <Content Include="Problems\DNA\input.txt" />
+    <Content Include="Problems\DNA\output.txt" />
+    <Content Include="Problems\PROT\input.txt" />
+    <Content Include="Problems\REVC\input.txt" />
+    <Content Include="Problems\PROT\output.txt" />
     <Content Include="Problems\RNA\input.txt" />
     <Content Include="Problems\RNA\output.txt" />
+    <Content Include="Problems\REVC\output.txt" />
+    <Content Include="pytest.ini" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
