@@ -1,11 +1,11 @@
 ﻿from Common.io_utils import ReadInput, WriteOutput
-from Common.bio_utils import NormalizeInput, IsStrongValidRNA
-from Problems.PROT.methods import *
+from Common.bio_utils import normalize_input, detect_sequence_type, SequenceType
+from Problems.PROT.prot_methods import *
 
 
 if __name__ == "__main__":
-    input_text = NormalizeInput(ReadInput())
-    if IsStrongValidRNA(input_text):
+    input_text = normalize_input(ReadInput())
+    if detect_sequence_type(input_text) == SequenceType.RNA:
         # choose method here
         solution = GetProteinFromRna(input_text)
     else:
@@ -13,4 +13,4 @@ if __name__ == "__main__":
     output_text = WriteOutput(solution)
 
     # for debug purposes
-    print(output_text)                          
+    print(output_text)

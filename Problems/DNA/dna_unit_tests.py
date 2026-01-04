@@ -1,5 +1,5 @@
 import pytest
-from Problems.DNA.methods import *
+from Problems.DNA.dna_methods import *
 
 # Tuple format: (input_data, expected_result)
 CALCULATION_TEST_CASES = [

@@ -1,6 +1,6 @@
 import pytest
-from Common.bio_utils import NormalizeInput
-from Problems.PROT.methods import *
+from Common.bio_utils import normalize_input
+from Problems.PROT.prot_methods import *
 
 # Tuple format: (input_data, expected_result)
 TRANSLATION_TEST_CASES = [
@@ -20,7 +20,7 @@ TRANSLATION_TEST_CASES = [
 
 @pytest.mark.parametrize("dna, expected", TRANSLATION_TEST_CASES)
 def TestTranslationMethods(dna, expected):
-    assert GetProteinFromRna(NormalizeInput(dna)) == expected
+    assert GetProteinFromRna(normalize_input(dna)) == expected
 
 '''
 print(GetRawPreProteinSequences(NormalizeInput(TRANSLATION_TEST_CASES[0][0])))

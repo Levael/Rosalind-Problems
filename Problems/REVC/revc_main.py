@@ -1,11 +1,11 @@
 ﻿from Common.io_utils import ReadInput, WriteOutput
-from Common.bio_utils import NormalizeInput, IsStrongValidDNA
-from Problems.REVC.methods import *
+from Common.bio_utils import normalize_input, detect_sequence_type, SequenceType
+from Problems.REVC.revc_methods import *
 
 
 if __name__ == "__main__":
-    input_text = NormalizeInput(ReadInput())
-    if IsStrongValidDNA(input_text):
+    input_text = normalize_input(ReadInput())
+    if detect_sequence_type(input_text) == SequenceType.DNA:
         # choose method here
         solution = GetComplimentDnaStrand(input_text)
     else:
@@ -13,4 +13,4 @@ if __name__ == "__main__":
     output_text = WriteOutput(solution)
 
     # for debug purposes
-    print(output_text)                          
+    print(output_text)

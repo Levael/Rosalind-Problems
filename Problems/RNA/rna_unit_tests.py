@@ -1,5 +1,5 @@
 import pytest
-from Problems.RNA.methods import *
+from Problems.RNA.rna_methods import *
 
 # Tuple format: (input_data, expected_result)
 TRANSCRIPTION_TEST_CASES = [

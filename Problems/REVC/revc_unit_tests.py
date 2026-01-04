@@ -1,5 +1,5 @@
 import pytest
-from Problems.REVC.methods import *
+from Problems.REVC.revc_methods import *
 
 # Tuple format: (input_data, expected_result)
 COMPLIMENTATION_TEST_CASES = [
