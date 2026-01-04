@@ -1,6 +1,6 @@
 import pytest
 from Common.bio_utils import SequenceType, FastaRecord
-from Problems.GC.gc_methods import get_gc_content, get_highest_gc_record, get_printable_result
+from Problems.GC.gc_methods import get_gc_content, get_record_with_highest_gc, get_printable_result
 
 # Tuple format: (input_data, expected_result)
 COUNTING_TEST_CASES = [
@@ -20,7 +20,7 @@ FINDING_TEST_CASES = [
 ]
 
 PRINTING_TEST_CASES = [
-    (FastaRecord("Rosalind_2", "CCGG", SequenceType.DNA), "Rosalind_2\n100.0")
+    (FastaRecord("Rosalind_2", "CCGG", SequenceType.DNA), "Rosalind_2\n100.000000")
 ]
 
 @pytest.mark.parametrize("sequence, expected", COUNTING_TEST_CASES)
@@ -29,7 +29,7 @@ def TestCountingMethods(sequence, expected):
 
 @pytest.mark.parametrize("sequence, expected", FINDING_TEST_CASES)
 def TestFindingMethods(sequence, expected):
-    assert get_highest_gc_record(sequence) == expected
+    assert get_record_with_highest_gc(sequence) == expected
 
 @pytest.mark.parametrize("record, expected", PRINTING_TEST_CASES)
 def TestPrintingMethods(record, expected):
